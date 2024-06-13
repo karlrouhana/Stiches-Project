@@ -2,6 +2,7 @@ import React from 'react';
 import Button from '../../Components/Button/Button';
 import Pic1 from '../../Assets/LandingPageAssets/confused.svg';
 import Pic2 from '../../Assets/LandingPageAssets/browsingUnis.svg';
+import Pic3 from '../../Assets/LandingPageAssets/education.svg';
 import './home.css';
 
 const Home = () => {
@@ -22,6 +23,12 @@ const Home = () => {
                 <div className="line-2"></div>
                 <div className="line-3">
                     <img src={Pic2} alt="Image for Line 3" className="line-image" />
+                </div>
+                <div class="line-4">
+                    <div class="line-4__content">
+
+                    </div>
+                    <img src={Pic3} alt="pic3" />
                 </div>
             </div>
         </div>
