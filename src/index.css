@@ -1,5 +1,10 @@
 /* Global Variables */
 :root{
+    /* Colors */
+    --yellow:  rgb(193, 241, 96);
+    --pink: rgb(253, 119, 186);
+    --green: rgb(165, 231, 222);
+
     /* Font Family */
     --font-bold: 'poppins-bold';
     --font-medium: 'poppins-medium';

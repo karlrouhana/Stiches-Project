@@ -1,12 +1,10 @@
 import React from 'react';
 import './App.css';
-import Button from './Components/Button/Button';
+import Navbar from './Pages/Navbar/Navbar';
 
 const App = () => {
   return (
-    <div>
-      <Button value="Log in" color='green'/>
-    </div>
+    <Navbar />
   )
 }
 
