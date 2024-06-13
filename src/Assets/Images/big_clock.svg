@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="30.349" height="30.35" viewBox="0 0 30.349 30.35">
+  <g id="Group_40106" data-name="Group 40106" transform="translate(-120 -1092.983)">
+    <g id="Group_39587" data-name="Group 39587" transform="translate(120 1092.983)">
+      <g id="clock">
+        <g id="Group_35530" data-name="Group 35530" transform="translate(1.679 1.679)">
+          <ellipse id="Ellipse_241" data-name="Ellipse 241" cx="12.595" cy="12.595" rx="12.595" ry="12.595" transform="translate(1.679 1.679)"/>
+          <g id="Layer_2" data-name="Layer 2">
+            <path id="Path_36892" data-name="Path 36892" d="M14.335,0A14.335,14.335,0,1,0,28.67,14.335,14.335,14.335,0,0,0,14.335,0Zm0,26.281A11.946,11.946,0,1,1,26.281,14.335,11.946,11.946,0,0,1,14.335,26.281Z"/>
+            <path id="Path_36893" data-name="Path 36893" d="M24.389,8H22V18.751h7.168V16.362H24.389Z" transform="translate(-8.86 -3.222)"/>
+          </g>
+        </g>
+        <g id="Group_35531" data-name="Group 35531">
+          <ellipse id="Ellipse_241-2" data-name="Ellipse 241" cx="12.595" cy="12.595" rx="12.595" ry="12.595" transform="translate(1.679 1.679)" fill="#f7d854"/>
+          <g id="Layer_2-2" data-name="Layer 2">
+            <path id="Path_36892-2" data-name="Path 36892" d="M14.335,0A14.335,14.335,0,1,0,28.67,14.335,14.335,14.335,0,0,0,14.335,0Zm0,26.281A11.946,11.946,0,1,1,26.281,14.335,11.946,11.946,0,0,1,14.335,26.281Z"/>
+            <path id="Path_36893-2" data-name="Path 36893" d="M24.389,8H22V18.751h7.168V16.362H24.389Z" transform="translate(-8.86 -3.222)"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

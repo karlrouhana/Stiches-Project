@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="12" height="15" viewBox="0 0 12 15">
+  <g id="Group_39523" data-name="Group 39523" transform="translate(-905.971 -208)">
+    <g id="Group_39105" data-name="Group 39105" transform="translate(906.703 208)">
+      <g id="Polygon_10" data-name="Polygon 10" transform="translate(0.268)">
+        <path d="M 8.084165573120117 6.5 L 0.9158343076705933 6.5 L 4.5 0.9246311187744141 L 8.084165573120117 6.5 Z" stroke="none"/>
+        <path d="M 4.5 1.849262237548828 L 1.831668376922607 6 L 7.168331146240234 6 L 4.5 1.849262237548828 M 4.5 0 L 9 7 L 0 7 L 4.5 0 Z" stroke="none" fill="#000"/>
+      </g>
+      <g id="Polygon_11" data-name="Polygon 11" transform="translate(11.268 15) rotate(180)">
+        <path d="M 8.145074844360352 7.5 L 0.8549256324768066 7.5 L 4.5 1.019867777824402 L 8.145074844360352 7.5 Z" stroke="none"/>
+        <path d="M 4.5 2.039735317230225 L 1.709851264953613 7 L 7.290148735046387 7 L 4.5 2.039735317230225 M 4.5 0 L 9 8 L 0 8 L 4.5 0 Z" stroke="none" fill="#000"/>
+      </g>
+    </g>
+    <g id="Group_39106" data-name="Group 39106" transform="translate(905.971 208)">
+      <g id="Polygon_12" data-name="Polygon 12" fill="#80d5ec">
+        <path d="M 8.084165573120117 6.5 L 0.9158343076705933 6.5 L 4.5 0.9246311187744141 L 8.084165573120117 6.5 Z" stroke="none"/>
+        <path d="M 4.5 1.849262237548828 L 1.831668376922607 6 L 7.168331146240234 6 L 4.5 1.849262237548828 M 4.5 0 L 9 7 L 0 7 L 4.5 0 Z" stroke="none" fill="#000"/>
+      </g>
+      <g id="Polygon_13" data-name="Polygon 13" transform="translate(11 15) rotate(180)" fill="#80d5ec">
+        <path d="M 8.145074844360352 7.5 L 0.8549256324768066 7.5 L 4.5 1.019867777824402 L 8.145074844360352 7.5 Z" stroke="none"/>
+        <path d="M 4.5 2.039735317230225 L 1.709851264953613 7 L 7.290148735046387 7 L 4.5 2.039735317230225 M 4.5 0 L 9 8 L 0 8 L 4.5 0 Z" stroke="none" fill="#000"/>
+      </g>
+    </g>
+  </g>
+</svg>
