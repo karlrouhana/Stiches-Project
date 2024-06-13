@@ -3,6 +3,7 @@ import Button from '../../Components/Button/Button';
 import Pic1 from '../../Assets/LandingPageAssets/confused.svg';
 import Pic2 from '../../Assets/LandingPageAssets/browsingUnis.svg';
 import Pic3 from '../../Assets/LandingPageAssets/education.svg';
+import Pic4 from '../../Assets/LandingPageAssets/yellowCheck.svg';
 import './home.css';
 
 const Home = () => {
@@ -26,9 +27,16 @@ const Home = () => {
                 </div>
                 <div class="line-4">
                     <div class="line-4__content">
-
+                        <span>In Less Than 15Mins</span>
+                        <div className='line-4__content-title'>
+                            <h1>Take Your</h1>
+                            <img src={Pic4} alt="Pic4" />
+                            <h1>Career Test</h1>
+                        </div>
+                        <p>Unearth your optimal career path in a mere 15-minute span using our complimentary assessment, and commence sculpting your professional journey at absolutely no cost.</p>
+                        <Button value='Start For Free' color='yellow' large={true} />
                     </div>
-                    <img src={Pic3} alt="pic3" />
+                    <img src={Pic3} alt="pic3" className='line-4__image'/>
                 </div>
             </div>
         </div>
