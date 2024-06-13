@@ -1,28 +1,31 @@
-.button{
+.button {
     font-family: var(--font-semibold);
-    font-size: 13px;
-    padding: 4.5px 0;
+    font-size: 0.8125rem;
+    padding: 0.28125rem 0; 
     text-align: center;
-    width: 110px;
-    border-radius: 8px;
+    width: 6.875rem; 
+    border-radius: 0.5rem; 
     background-color: unset;
-    border: 1.8px solid black;
-    box-shadow: 3px 3px 0px 0px rgba(0,0,0);
+    border: 0.09375rem solid black;
+    box-shadow: 0.1875rem 0.1875rem 0px 0px rgba(0, 0, 0); 
+    cursor: pointer;
 }
 
-.btn-large{
-    width: 170px;
-    height: 40px;
+.btn-large {
+    width: 11rem;
+    height: 2.5rem;
+    font-size: 1rem;
+    box-shadow: 0.19rem 0.19rem 0px 0px rgba(0, 0, 0); 
 }
 
-.btn-yellow{
+.btn-yellow {
     background-color: var(--yellow);
 }
 
-.btn-pink{
+.btn-pink {
     background-color: var(--pink);
 }
 
-.btn-green{
+.btn-green {
     background-color: var(--green);
 }
