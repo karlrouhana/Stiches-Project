@@ -1,0 +1,48 @@
+.stage{
+    border: 0.1rem solid black;
+    border-radius: 1rem;
+    box-shadow: 0.3rem 0.3rem 0px 0px rgba(0, 0, 0); 
+    width: 40rem;
+    height: 8.5rem;
+}
+
+.stage__header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top-left-radius: .9rem;
+    border-top-right-radius: .9rem;
+    padding: .5rem 2.5rem;
+    border-bottom: 0.1rem solid black;
+    font-family: var(--font-semibold);
+    font-size: 1rem;
+}
+
+.stage__header img{
+    width: 1.8rem;
+    height: 1.8rem;
+}
+
+.stage__content{
+    padding: 1.1rem 2.25rem;
+    font-family: var(--font-light);
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.stage-yellow{
+    background-color: var(--yellow);
+}
+
+.stage-pink{
+    background-color: var(--pink);
+}
+
+.stage-green{
+    background-color: var(--green);
+}
+
+.faded{
+    opacity: 0.3;
+    filter: grayscale(0.8);
+}
