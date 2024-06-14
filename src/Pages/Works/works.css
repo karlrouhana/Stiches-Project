@@ -30,7 +30,6 @@
 .works__footer-cards {
     display: flex;
     flex-direction: column;
-
     gap: 1.2rem;
     margin-left: 6.5rem;
 }
@@ -45,7 +44,6 @@
     transform: translateX(120%) translateY(5%);
 }
 
-
 .works__footer-image {
     width: 30%;
 }
@@ -56,9 +54,8 @@
     transform: translateY(1%);
 }
 
-
 /* Newsletter Section Styling */
-.works__newsletter{
+.works__newsletter {
     background-color: var(--blue);
     border-top: 0.1875rem solid black;
     border-bottom: 0.1875rem solid black;
@@ -67,14 +64,14 @@
     height: 11rem;
 }
 
-.works__newsletter-content{
+.works__newsletter-content {
     display: flex;
     align-items: center;
     gap: 6rem;
     width: 100%;
 }
 
-.works__newsletter p{
+.works__newsletter p {
     font-family: var(--font-regular);
     font-weight: 600;
     width: 22rem;
@@ -97,7 +94,7 @@
     padding: 0.9rem 1.3rem;
 }
 
-.works__newsletter form input::placeholder{
+.works__newsletter form input::placeholder {
     font-size: 1rem;
     font-family: var(--font-regular);
 }

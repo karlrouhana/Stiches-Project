@@ -2,7 +2,6 @@ import React from 'react';
 import dots from '../../Assets/LandingPageAssets/dots.svg';
 import './stage.css';
 
-
 const Stage = (props) => {
     const getClassForColor = () => {
         switch (props.color) {
@@ -25,7 +24,6 @@ const Stage = (props) => {
                 <p>{props.heading}</p>
                 <img src={dots} alt="dots" />
             </div>
-
             <div className='stage__content'>
                 <p>{props.content}</p>
             </div>
@@ -33,4 +31,4 @@ const Stage = (props) => {
     )
 }
 
-export default Stage
+export default Stage;

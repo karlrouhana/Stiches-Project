@@ -11,15 +11,14 @@ const Works = () => {
     return (
         <div className='works'>
             <div className='works__steps'>
-                <div class="works__steps-heading">
+                <div className="works__steps-heading">
                     <Heading title='How It Works' subtitle='Quick, Easy & Actionable' />
                     <Button value='Apply Now' color='yellow' large={true} />
                 </div>
-
                 <img src={steps} alt="steps" />
             </div>
             <div className='works__footer'>
-                <div class="works__footer-cards">
+                <div className="works__footer-cards">
                     <Card value='A Network Of 350 Partner Universities Spanning Across 30 Countries' star={true} />
                     <Card value='Backed By 10 Years Of Experience In Service' star={true} />
                     <Card value='More Than 7,000 Applications Opened' star={true} />
@@ -29,17 +28,17 @@ const Works = () => {
                     <img src={uploadImg} alt="image" />
                 </div>
             </div>
-            <div class="works__newsletter">
-                    <div class="works__newsletter-content">
-                        <p>Subscribe To Our Newsletter</p>
-                        <form>
-                            <input type='email' placeholder='ex: janegilmour@gmail.com'/>
-                            <button>Suscribe Now</button>
-                        </form>
-                    </div>
+            <div className="works__newsletter">
+                <div className="works__newsletter-content">
+                    <p>Subscribe To Our Newsletter</p>
+                    <form>
+                        <input type='email' placeholder='ex: janegilmour@gmail.com'/>
+                        <button>Subscribe Now</button>
+                    </form>
                 </div>
+            </div>
         </div>
     )
 }
 
-export default Works
+export default Works;

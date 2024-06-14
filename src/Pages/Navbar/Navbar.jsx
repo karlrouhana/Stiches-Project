@@ -17,7 +17,7 @@ const Navbar = () => {
                 <a href=''>Media Center <IoIosArrowDown /></a>
                 <a href=''>For Educational Institutions <LuArrowUpRight /></a>
 
-                <div class="navbar__links-buttons">
+                <div className="navbar__links-buttons">
                     <Button value='Log in' />
                     <Button value='Sign Up' color='pink' />
                 </div>
@@ -26,4 +26,4 @@ const Navbar = () => {
     )
 }
 
-export default Navbar
+export default Navbar;

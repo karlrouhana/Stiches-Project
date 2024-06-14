@@ -3,19 +3,18 @@ import Card from '../../Components/Card/Card';
 import questionPic from '../../Assets/LandingPageAssets/exclamations.svg';
 import './questions.css';
 
-
 const Questions = () => {
     return (
         <div className='questions'>
-            <div class="questions__heading">
-                <div class="questions__heading-content">
+            <div className="questions__heading">
+                <div className="questions__heading-content">
                     <p>Answers to Your Questions</p>
                     <h1>Frequently Asked Questions </h1>
                 </div>
                 <img src={questionPic} alt="pic" />
             </div>
 
-            <div class="questions__cards">
+            <div className="questions__cards">
                 <Card value='Q1 : How do I get started with the application process?' />
                 <Card value='Q2 : What types of programs are available at partner universities?' />
                 <Card value='Q3 : Can I receive financial aid or scholarships for studying abroad?' />
@@ -26,4 +25,4 @@ const Questions = () => {
     )
 }
 
-export default Questions
+export default Questions;

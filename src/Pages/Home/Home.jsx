@@ -25,8 +25,8 @@ const Home = () => {
                 <div className="line-3">
                     <img src={Pic2} alt="Image for Line 3" className="line-image" />
                 </div>
-                <div class="line-4">
-                    <div class="line-4__content">
+                <div className="line-4">
+                    <div className="line-4__content">
                         <span>In Less Than 15Mins</span>
                         <div className='line-4__content-title'>
                             <h1>Take Your</h1>

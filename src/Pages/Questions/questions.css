@@ -22,7 +22,6 @@
     justify-content: center;
 }
 
-
 .questions__heading-content p {
     color: var(--pink);
     font-family: var(--font-semibold);
@@ -36,7 +35,6 @@
     transform: scale(1.7);
     margin-top: 2rem;
 }
-
 
 .questions__heading-content h1 {
     font-family: var(--font-bold);

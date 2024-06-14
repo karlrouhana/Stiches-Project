@@ -98,14 +98,13 @@
 }
 
 .line-4__content{
-    padding: .5rem 5rem 5rem 5rem;
+    padding: 0.5rem 5rem 5rem 5rem;
 }
 
 .line-4__content span{
     color: var(--pink);
     font-family: var(--font-bold);
-    font-size: .9rem;
-
+    font-size: 0.9rem;
 }
 
 .line-4__content-title{
@@ -120,8 +119,8 @@
 .line-4__content-title img{
     margin: 0;
     padding: 0;
-    width:  4.6875rem;
-    height:  4.6875rem;
+    width: 4.6875rem;
+    height: 4.6875rem;
 }
 
 .line-4__content p{
@@ -136,4 +135,3 @@
     position: relative;
     bottom: -0.09rem;
 }
-

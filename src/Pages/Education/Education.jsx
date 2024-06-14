@@ -7,12 +7,12 @@ import './education.css';
 const Education = () => {
     return (
         <div className='education'>
-            <div class="education__image">
+            <div className="education__image">
                 <img src={Pic} alt="Pic" />
             </div>
-            <div class="education__content">
+            <div className="education__content">
                 <Heading title='Why Education Basket?' subtitle='Smoother Educational Journeys' />
-                <div class="education__content-stages">
+                <div className="education__content-stages">
                     <Stage
                         heading='Streamlined Application Submission'
                         content='Apply to multiple institutions seamlessly through one platform, simplifying the process.'
@@ -42,4 +42,4 @@ const Education = () => {
     )
 }
 
-export default Education
+export default Education;

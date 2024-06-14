@@ -10,9 +10,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-top-left-radius: .9rem;
-    border-top-right-radius: .9rem;
-    padding: .5rem 2.5rem;
+    border-top-left-radius: 0.9rem;
+    border-top-right-radius: 0.9rem;
+    padding: 0.5rem 2.5rem;
     border-bottom: 0.1rem solid black;
     font-family: var(--font-semibold);
     font-size: 1rem;
