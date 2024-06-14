@@ -16,6 +16,9 @@
     --font-medium-italic: 'poppins-medium-italic';
     --font-regular-italic: 'poppins-regular-italic';
 
+    /* Animations */
+    --move-down: moveDown;
+    --move-up: moveUp;
 }
 
 /* Fonts */
@@ -52,4 +55,22 @@
 @font-face {
     font-family: 'poppins-regular-italic';
     src: url('./Assets/fonts/Poppins-Italic.ttf');
+}
+
+@keyframes moveDown {
+    0% {
+        top: -100%;
+    }
+    100% {
+        top: 0%; 
+    }
+}
+
+@keyframes moveUp {
+    0% {
+        top: 0%;
+    }
+    100% {
+        top: -100%; 
+    }
 }
