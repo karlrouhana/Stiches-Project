@@ -42,7 +42,10 @@
     background-color: var(--green);
 }
 
+.stage-blue{
+    background-color: var(--blue);
+}
+
 .faded{
     opacity: 0.3;
-    filter: grayscale(0.8);
 }

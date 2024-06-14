@@ -12,6 +12,8 @@ const Stage = (props) => {
                 return 'stage-pink';
             case 'green':
                 return 'stage-green';
+            case 'blue':
+                return 'stage-blue';
             default:
                 return '';
         }
@@ -20,7 +22,7 @@ const Stage = (props) => {
     return (
         <div className={`stage ${props.faded ? 'faded' : ''}`}>
             <div className={`stage__header ${getClassForColor()}`}>
-                <p>{props.title}</p>
+                <p>{props.heading}</p>
                 <img src={dots} alt="dots" />
             </div>
 

@@ -1,0 +1,11 @@
+.heading p{
+    color: var(--pink);
+    font-family: var(--font-bold);
+    font-size: .9rem;
+
+}
+
+.heading h1{
+    font-family: var(--font-semibold);
+    font-size: 3rem;
+}
