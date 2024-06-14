@@ -11,7 +11,7 @@ const App = () => {
       <Navbar />
       <Home />
       <Education />
-      <Card value='Over 2000 Students Enrolled' star={true}/>
+      <Card value='Q1: Over 2000 Students Enrolled' star={true}/>
     </>
   )
 }
