@@ -13,6 +13,12 @@ const Navbar = () => {
 
     const handleMenuToggle = () => {
         setToggleMenu(!toggleMenu);
+        const body = document.querySelector('body');
+        if (!toggleMenu) {
+            body.style.overflow = 'hidden';
+        } else {
+            body.style.overflow = '';
+        }
     };
 
     const handleLinkClick = () => {
@@ -25,7 +31,7 @@ const Navbar = () => {
                 <img src={logo} alt="Logo" />
             </div>
 
-            <div className={`menu-icon ${toggleMenu ? 'close' : 'open'}`} onClick={handleMenuToggle}>
+            <div className='menu-icon' onClick={handleMenuToggle}>
                 {toggleMenu ? <RiCloseFill /> : <IoMenu />}
             </div>
 
