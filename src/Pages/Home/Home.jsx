@@ -1,12 +1,24 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Button from '../../Components/Button/Button';
 import Pic1 from '../../Assets/LandingPageAssets/confused.svg';
 import Pic2 from '../../Assets/LandingPageAssets/browsingUnis.svg';
 import Pic3 from '../../Assets/LandingPageAssets/education.svg';
 import Pic4 from '../../Assets/LandingPageAssets/yellowCheck.svg';
+import MobilePic from '../../Assets/LandingPageAssets/minibrowse.svg';
 import './home.css';
 
 const Home = () => {
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 1050);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth < 1050);
+        };
+
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
     return (
         <div className='home'>
             <div className='home__content'>
@@ -23,7 +35,7 @@ const Home = () => {
                 </div>
                 <div className="line-2"></div>
                 <div className="line-3">
-                    <img src={Pic2} alt="Image for Line 3" className="line-image" />
+                    <img src={isMobile ? MobilePic : Pic2} alt="Image for Line 3" className="line-image" />
                 </div>
                 <div className="line-4">
                     <div className="line-4__content">

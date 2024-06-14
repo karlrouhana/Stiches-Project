@@ -52,6 +52,14 @@
         padding: 1rem 2rem;
         position: unset;
     }
+    .navbar__image  {
+        padding: .7rem 1rem;
+    }
+
+    .navbar__image img {
+        width: 7rem;
+        height: auto;
+    }
 
     .navbar__links {
         position: absolute;
