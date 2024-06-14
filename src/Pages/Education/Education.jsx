@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Stage from '../../Components/Stage/Stage';
 import Heading from '../../Components/Heading/Heading';
 import Pic from '../../Assets/LandingPageAssets/stars.svg';
