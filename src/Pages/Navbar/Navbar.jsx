@@ -2,7 +2,7 @@ import React from 'react';
 import Button from '../../Components/Button/Button';
 import { IoIosArrowDown } from "react-icons/io";
 import { LuArrowUpRight } from "react-icons/lu";
-import logo from '../../Assets/Images/logo.webp';
+import logo from '../../Assets/LandingPageAssets/new_logo.svg';
 import './navbar.css';
 
 const Navbar = () => {

@@ -12,6 +12,10 @@
     --font-semibold: 'poppins-semi-bold';
     --font-regular: 'poppins-regular';
     --font-light: 'poppins-light';
+
+    --font-medium-italic: 'poppins-medium-italic';
+    --font-regular-italic: 'poppins-regular-italic';
+
 }
 
 /* Fonts */
@@ -38,4 +42,14 @@
 @font-face {
     font-family: 'poppins-light';
     src: url('./Assets/fonts/Poppins-Light.ttf');
+}
+
+@font-face {
+    font-family: 'poppins-medium-italic';
+    src: url('./Assets/fonts/Poppins-MediumItalic.ttf');
+}
+
+@font-face {
+    font-family: 'poppins-regular-italic';
+    src: url('./Assets/fonts/Poppins-Italic.ttf');
 }

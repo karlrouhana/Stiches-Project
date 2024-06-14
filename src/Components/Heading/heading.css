@@ -1,6 +1,6 @@
 .heading p{
     color: var(--pink);
-    font-family: var(--font-bold);
+    font-family: var(--font-semibold);
     font-size: .9rem;
 
 }
