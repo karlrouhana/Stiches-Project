@@ -11,23 +11,25 @@
 }
 
 /* Responsive styles for smaller screens */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1050px) {
     .heading p {
-        font-size: 0.8rem;
-    }
-
-    .heading h1 {
-        font-size: 2.5rem;
-    }
-}
-
-/* Responsive styles for even smaller screens */
-@media screen and (max-width: 576px) {
-    .heading p {
-        font-size: 0.7rem;
+        font-size: 1rem;
     }
 
     .heading h1 {
         font-size: 2rem;
+        margin-top: 0.4rem;
+    }
+}
+
+/* Responsive styles for even smaller screens */
+@media screen and (max-width: 768px) {
+    .heading p {
+        font-size: 0.95rem;
+    }
+
+    .heading h1 {
+        font-size: 1.5rem;
+        margin-top: 0.4rem;
     }
 }

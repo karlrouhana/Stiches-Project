@@ -184,8 +184,9 @@
     }
     
     .home__lines .line-3 img {
+        align-self: start;
         position: unset;
-        transform: translateY(0) scale(0.9) translateX(-3.2rem);
+        transform: translateY(0) scale(0.87) translateX(-6rem);
         width: 100%;
     }
     
@@ -236,6 +237,6 @@
         align-self: center;
         width: 100%;
         position: unset;
-        transform: scale(0.9);
+        transform: scale(0.87);
     }
 }
