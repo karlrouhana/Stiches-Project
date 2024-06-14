@@ -16,6 +16,8 @@
     height: 2.5rem;
     font-size: 1rem;
     box-shadow: 0.19rem 0.19rem 0px 0px rgba(0, 0, 0); 
+    cursor: pointer;
+
 }
 
 .btn-yellow {

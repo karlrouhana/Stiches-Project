@@ -5,14 +5,13 @@
     border: 0.15rem solid black;
     border-radius: 1rem;
     width: 40rem;
-    height: 4rem;
+    height: 4.3rem;
     box-shadow: 0.25rem 0.15rem 0px 0px rgba(0, 0, 0); 
     padding: 1rem 2rem;
 }
 
 .card p{
-    font-family: var(--font-light);
-    font-weight: bold;
+    font-family: var(--font-regular);
     font-size: 1rem;
 }
 
@@ -22,13 +21,10 @@
     background-color: white;
     border: 0.15rem solid black;
     border-radius: 1rem;
-    width: 40rem;
-    height: 4rem;
-    box-shadow: 0.3rem 0.3rem 0px 0px rgba(0, 0, 0); 
+    width: 41rem;
+    height: 4.3em;
+    box-shadow: 0.3rem 0.25rem 0px 0px rgba(0, 0, 0); 
     padding: 1rem 2rem;
-    margin-top: 10%;
-    margin-bottom: 50%;
-    margin-left: 10%;
 }
 
 .card__content{
@@ -38,10 +34,10 @@
 }
 
 .card__content img{
-    width: 5%;
+    width: 1.5rem;
 }
 
 .card__content p{
-    font-family: var(--font-medium);
+    font-family: var(--font-regular);
     font-size: 1rem;
 }

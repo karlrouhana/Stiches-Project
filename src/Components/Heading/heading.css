@@ -6,6 +6,6 @@
 }
 
 .heading h1{
-    font-family: var(--font-semibold);
+    font-family: var(--font-bold);
     font-size: 3rem;
 }

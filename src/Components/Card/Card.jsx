@@ -1,5 +1,5 @@
 import React from 'react';
-import star from '../../Assets/Images/star.webp';
+import star from '../../Assets/Images/star.png';
 import './card.css';
 
 const Card = (props) => {

@@ -3,7 +3,7 @@ import './App.css';
 import Navbar from './Pages/Navbar/Navbar';
 import Home from './Pages/Home/Home';
 import Education from './Pages/Education/Education';
-import Card from './Components/Card/Card';
+import Works from './Pages/Works/Works';
 
 const App = () => {
   return (
@@ -11,7 +11,7 @@ const App = () => {
       <Navbar />
       <Home />
       <Education />
-      <Card value='Q1: Over 2000 Students Enrolled' star={true}/>
+      <Works />
     </>
   )
 }

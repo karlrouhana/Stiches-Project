@@ -1,0 +1,119 @@
+/* General Styling */
+.works {
+    margin-top: 6rem;
+    margin-bottom: 50%;
+}
+
+/* Steps Section Styling */
+.works__steps {
+    display: flex;
+    flex-direction: column;
+}
+
+.works__steps-heading {
+    margin-left: 6.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.works__steps img {
+    margin-right: 8.5%;
+    transform: translateY(-20%);
+}
+
+/* Footer Section Styling */
+.works__footer {
+    display: flex;
+    gap: 11%;
+}
+
+.works__footer-cards {
+    display: flex;
+    flex-direction: column;
+
+    gap: 1.2rem;
+    margin-left: 6.5rem;
+}
+
+.works__footer-cards > *:last-child::after {
+    content: '';
+    background: url('../../Assets/LandingPageAssets/qrCode.svg') no-repeat;
+    background-size: cover;
+    display: block;
+    width: 14rem;
+    height: 14rem;
+    transform: translateX(120%) translateY(5%);
+}
+
+
+.works__footer-image {
+    width: 30%;
+}
+
+.works__footer-image img {
+    width: 100%;
+    height: auto;
+    transform: translateY(1%);
+}
+
+
+/* Newsletter Section Styling */
+.works__newsletter{
+    background-color: var(--blue);
+    border-top: 0.1875rem solid black;
+    border-bottom: 0.1875rem solid black;
+    padding: 2.3rem 4rem 2rem 4rem;
+    display: flex;
+    height: 11rem;
+}
+
+.works__newsletter-content{
+    display: flex;
+    align-items: center;
+    gap: 6rem;
+    width: 100%;
+}
+
+.works__newsletter p{
+    font-family: var(--font-regular);
+    font-weight: 600;
+    width: 22rem;
+    font-size: 2.3rem;
+    margin-left: 2.5rem;
+    line-height: 3.3rem;
+}
+
+.works__newsletter form {
+    flex: 1;
+    position: relative;
+}
+
+.works__newsletter form input {
+    width: calc(100% - 14rem);
+    background-color: white;
+    border: 0.1rem solid black;
+    border-right: none;
+    border-radius: 0.5rem 0 0 0.5rem;
+    padding: 0.9rem 1.3rem;
+}
+
+.works__newsletter form input::placeholder{
+    font-size: 1rem;
+    font-family: var(--font-regular);
+}
+
+.works__newsletter form button {
+    position: absolute;
+    right: 1%;
+    top: 0;
+    height: 100%;
+    width: 14rem;
+    font-family: var(--font-semibold);
+    text-align: center;
+    border-radius: 0.5rem;
+    background-color: var(--yellow);
+    border: 0.09375rem solid black;
+    font-size: 1rem;
+    cursor: pointer;
+}

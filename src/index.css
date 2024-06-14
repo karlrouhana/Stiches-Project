@@ -10,6 +10,7 @@
     --font-bold: 'poppins-bold';
     --font-medium: 'poppins-medium';
     --font-semibold: 'poppins-semi-bold';
+    --font-regular: 'poppins-regular';
     --font-light: 'poppins-light';
 }
 
@@ -27,6 +28,11 @@
 @font-face {
     font-family: 'poppins-medium';
     src: url('./Assets/fonts/Poppins-Medium.ttf');
+}
+
+@font-face {
+    font-family: 'poppins-regular';
+    src: url('./Assets/fonts/Poppins-Regular.ttf');
 }
 
 @font-face {
