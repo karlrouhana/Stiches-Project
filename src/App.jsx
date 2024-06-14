@@ -6,6 +6,7 @@ import Education from './Pages/Education/Education';
 import Works from './Pages/Works/Works';
 import Testimonials from './Pages/Testimonials/Testimonials';
 import Questions from './Pages/Questions/Questions';
+import Footer from './Pages/Footer/Footer';
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
       <Works />
       <Testimonials />
       <Questions />
+      <Footer />
     </>
   )
 }
