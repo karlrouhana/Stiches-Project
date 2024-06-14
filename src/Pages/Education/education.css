@@ -31,15 +31,15 @@
     row-gap: 1.7rem;
 }
 
-.education__content-stages > *:nth-child(2) {
+.education__content-stages>*:nth-child(2) {
     align-self: flex-end;
 }
 
-.education__content-stages > *:nth-child(3) {
+.education__content-stages>*:nth-child(3) {
     align-self: center;
 }
 
-.education__content-stages > *:nth-child(4) {
+.education__content-stages>*:nth-child(4) {
     align-self: flex-start;
 }
 
@@ -49,6 +49,8 @@
         justify-content: center;
         width: 100%;
         border-bottom: 0.1875rem solid black;
+        padding: 0 3.2rem;
+
     }
 
     .education__image {
@@ -75,7 +77,7 @@
         padding: 0;
     }
 
-    .education__content > *:first-child {
+    .education__content>*:first-child {
         align-self: flex-start;
     }
 

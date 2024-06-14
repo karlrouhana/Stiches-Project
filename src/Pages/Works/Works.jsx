@@ -1,13 +1,25 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Card from '../../Components/Card/Card';
 import steps from '../../Assets/LandingPageAssets/Steps.svg';
 import uploadImg from '../../Assets/LandingPageAssets/uploadA.svg';
 import qr from '../../Assets/LandingPageAssets/qrCode.svg';
+import mobilePic from '../../Assets/LandingPageAssets/ministeps.svg';
 import Heading from '../../Components/Heading/Heading';
 import Button from '../../Components/Button/Button';
 import './works.css';
 
 const Works = () => {
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 1050);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth < 1050);
+        };
+
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
     return (
         <div className='works'>
             <div className='works__steps'>
@@ -15,14 +27,14 @@ const Works = () => {
                     <Heading title='How It Works' subtitle='Quick, Easy & Actionable' />
                     <Button value='Apply Now' color='yellow' large={true} />
                 </div>
-                <img src={steps} alt="steps" />
+                <img src={isMobile ? mobilePic : steps} alt="steps" />
             </div>
             <div className='works__footer'>
                 <div className="works__footer-cards">
-                    <Card value='A Network Of 350 Partner Universities Spanning Across 30 Countries' star={true} />
-                    <Card value='Backed By 10 Years Of Experience In Service' star={true} />
-                    <Card value='More Than 7,000 Applications Opened' star={true} />
-                    <Card value='Over 2,000 Students Enrolled' star={true} />
+                    <Card value={`${isMobile ? '' : 'A'} Network Of 350 Partner Universities ${isMobile ? '' : 'Spanning Across 30 Countries'}`} star={true} />
+                    <Card value={`${isMobile ? '' : 'Backed By'} 10 Years Of Experience In Service`} star={true} />
+                    <Card value={`${isMobile ? 'Over' : 'More Than'} 7,000 Applications Opened`} star={true} />
+                    <Card value={`${isMobile ? '+' : 'Over'}2,000 Students Enrolled`} star={true} />
                 </div>
                 <div className='works__footer-image'>
                     <img src={uploadImg} alt="image" />

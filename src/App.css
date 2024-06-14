@@ -17,8 +17,3 @@ ul{
     list-style: none;
 }
 
-@media screen and (max-width: 1050px){
-    .main{
-        padding: 0 3.2rem;
-    }
-}

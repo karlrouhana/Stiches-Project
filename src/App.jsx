@@ -12,14 +12,12 @@ const App = () => {
   return (
     <>
       <Navbar />
-      <div className='main'>
-        <Home />
-        <Education />
-        <Works />
-        <Testimonials />
-        <Questions />
-        <Footer />
-      </div>
+      <Home />
+      <Education />
+      <Works />
+      <Testimonials />
+      <Questions />
+      <Footer />
     </>
   )
 }
