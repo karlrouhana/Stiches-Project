@@ -47,3 +47,48 @@
     flex-direction: column;
     gap: 2rem;
 }
+
+@media screen and (max-width: 768px) {
+    .questions{
+        padding: 0 1.7rem;
+        width: 100%;
+    }
+    .questions__heading {
+        margin-left: 0;
+        gap: 0;
+        width: 100%;
+    }
+    
+    .questions__heading-content{
+        width: 100%;
+        margin-bottom: 2.5rem;
+    }
+    
+    .questions__heading-content p {
+        font-size: 0.8rem;
+        margin-left: 0;
+    }
+    
+    .questions__heading img{
+        display: none;
+    }
+    
+    .questions__heading-content h1 {
+        font-size: 1.34rem;
+        text-align: center;
+        margin: 0;
+    }
+    
+    .questions__cards{
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+}
+
+@media screen and (max-width: 350px) {
+    .questions__heading-content h1 {
+        font-size: 1rem;
+    }
+}

@@ -1,9 +1,21 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Card from '../../Components/Card/Card';
 import questionPic from '../../Assets/LandingPageAssets/exclamations.svg';
 import './questions.css';
 
 const Questions = () => {
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth < 768);
+        }
+        window.addEventListener('resize', handleResize);
+        return () => {
+            window.removeEventListener('resize', handleResize);
+            }
+    }, []);
+
     return (
         <div className='questions'>
             <div className="questions__heading">
@@ -11,7 +23,7 @@ const Questions = () => {
                     <p>Answers to Your Questions</p>
                     <h1>Frequently Asked Questions </h1>
                 </div>
-                <img src={questionPic} alt="pic" />
+                {!isMobile && <img src={questionPic} alt="pic" />}
             </div>
 
             <div className="questions__cards">
