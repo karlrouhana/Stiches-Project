@@ -116,10 +116,6 @@
         margin-top: 10rem;
     }
 
-    .works__steps {
-        padding: 0 3.2rem;
-    }
-
     .works__steps-heading {
         margin: 0;
         display: flex;
@@ -132,7 +128,7 @@
 
     .works__steps img {
         margin: 8rem 0;
-        transform: translateY(0) scale(1.27);
+        transform: translateY(0);
     }
 
     .works__footer {
@@ -140,8 +136,8 @@
         justify-content: center;
         align-items: center;
         width: 100%;
-        margin-top: 4rem;
-        margin-bottom: 10rem;
+        margin-top: 0rem;
+        margin-bottom: 6rem;
         gap: 11%;
         padding: 0 3.2rem;
     }
@@ -231,12 +227,9 @@
 
 
 @media screen and (max-width: 450px) {
-    .works__steps {
-        padding: 0 1.7rem;
-    }
-
     .works__steps-heading {
         gap: 0.7rem;
+        padding: 0 1.7rem;
     }
 
     .works__steps img {
@@ -260,7 +253,9 @@
     }
 
     .works__newsletter p {
+        font-size: 1.1rem;
         line-height: 1.5rem;
+        font-family: var(--font-medium);
         margin: 0;
     }
 

@@ -26,6 +26,8 @@
 @media screen and (max-width: 768px) {
     .heading p {
         font-size: 0.95rem;
+        font-family: var(--font-bold);
+
     }
 
     .heading h1 {

@@ -67,6 +67,7 @@
         height: auto;
         padding: 1rem 2rem;
         border-radius: 1.5rem;
+        box-shadow: 0.15rem 0.1rem 0px 0px rgba(0, 0, 0);
     }
 
     .card p {
@@ -76,7 +77,9 @@
     }
 
     .card__star {
-        padding: 1rem 0rem 1rem 0.7rem;
+        padding: 0.2rem 0rem 0.2rem 0.7rem;
+        border-radius: .7rem;
+        box-shadow: 0.2rem 0.15rem 0px 0px rgba(0, 0, 0);
     }
 
     .card__content {

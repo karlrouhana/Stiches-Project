@@ -16,6 +16,9 @@
     --font-medium-italic: 'poppins-medium-italic';
     --font-regular-italic: 'poppins-regular-italic';
 
+    --font-dja: 'dja';
+    --font-dja-outline: 'dja-outline';
+
     /* Animations */
     --move-down: moveDown;
     --move-up: moveUp;
@@ -55,6 +58,16 @@
 @font-face {
     font-family: 'poppins-regular-italic';
     src: url('./Assets/fonts/Poppins-Italic.ttf');
+}
+
+@font-face {
+    font-family: 'dja';
+    src: url('./Assets/fonts/DJADOEL/DJADOEL.woff');
+}
+
+@font-face {
+    font-family: 'dja-outline';
+    src: url('./Assets/fonts/DJADOEL/DJADOEL-outline.woff');
 }
 
 @keyframes moveDown {

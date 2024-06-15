@@ -265,6 +265,11 @@
 
     .home__content-buttons {
         gap: 1rem;
+        justify-content: center;
+    }
+
+    .home__content-buttons button{
+        width: 100%;
     }
 
     .line-3 {
