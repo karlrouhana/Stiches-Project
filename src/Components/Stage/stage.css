@@ -53,7 +53,6 @@
 @media screen and (max-width: 1050px) {
     .stage {
         width: 100%;
-        
     }
 }
 
@@ -81,5 +80,19 @@
         font-family: var(--font-light);
         font-weight: bold;
         font-size: 1.03rem;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .stage__header {
+        font-size: 0.9rem;
+        padding: 0.3rem 0rem 0.3rem 1rem;
+        border-top-left-radius: 0.7rem;
+        border-top-right-radius: 0.7rem;
+    }
+
+    .stage__content {
+        padding: 0.5rem 0rem 0rem 1rem;
+        font-size: 0.8rem;
     }
 }

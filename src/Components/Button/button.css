@@ -9,6 +9,7 @@
     border: 0.09375rem solid black;
     box-shadow: 0.1875rem 0.1875rem 0px 0px rgba(0, 0, 0); 
     cursor: pointer;
+    color: black;
 }
 
 .btn-large {
@@ -17,6 +18,7 @@
     font-size: 1rem;
     box-shadow: 0.19rem 0.19rem 0px 0px rgba(0, 0, 0); 
     cursor: pointer;
+    color: black;
 }
 
 .btn-yellow {
@@ -29,4 +31,26 @@
 
 .btn-green {
     background-color: var(--green);
+}
+
+
+@media screen and (max-width: 550px) {
+    .button {
+        font-size: 0.7rem;
+        width: 5.8rem; 
+    }
+    
+    .btn-large {
+        width: 8rem;
+        height: 2rem;
+        font-size: 0.7rem;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .btn-large {
+        width: 6.5rem;
+        height: 1.8rem;
+        font-size: 0.67rem;
+    }
 }

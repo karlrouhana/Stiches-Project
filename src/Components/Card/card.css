@@ -60,3 +60,42 @@
         font-size: 1rem;
     }
 }
+
+@media screen and (max-width: 768px){
+    .card__star{
+        padding: 1rem 0rem 1rem 0.7rem;
+    }
+
+    .card__content{
+        gap: 0.8rem;
+    }
+
+    .card__content img{
+        width: 0.9rem;
+    }
+
+    .card__content p{
+        font-family: var(--font-regular);
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 350px){
+    .card__star{
+        padding: 1rem 0rem 1rem 0.5rem;
+    }
+
+    .card__content{
+        gap: 0.5rem;
+    }
+
+    .card__content img{
+        width: 1rem;
+    }
+
+    .card__content p{
+        font-family: var(--font-regular);
+        font-size: 0.7rem;
+        white-space: nowrap;
+    }
+}

@@ -45,7 +45,7 @@ const Works = () => {
                     <p>Subscribe To Our Newsletter</p>
                     <form>
                         <input type='email' placeholder='ex: janegilmour@gmail.com'/>
-                        <button>Subscribe Now</button>
+                        <button>{`${isMobile ? 'Subscribe' : 'Subscribe Now'}`}</button>
                     </form>
                 </div>
             </div>

@@ -86,3 +86,17 @@
         margin-top: 2.7rem;
     }
 }
+
+@media screen and (max-width: 450px) {
+    .education {
+        padding: 0 1.7rem;
+    }
+
+    .education__content-stages {
+        margin-top: 2rem;
+    }
+
+    .education__image {
+        margin: 4.5rem 0 0 0;
+    }
+}
