@@ -5,12 +5,12 @@ import './stage.css';
 
 const Stage = (props) => {
     const stageVariants = {
-        animate: { transition: { duration: 0.5 } },
+        animate: { transition: props.transition },
         hover: {
             x: 2,
             y: 2,
             boxShadow: "0px 0px 0px 0px rgba(0, 0, 0, 0)",
-            transition: { duration: 0.3 },
+            transition: { duration: 0.3, delay: 0},
         }
     };
 
@@ -32,9 +32,9 @@ const Stage = (props) => {
     return (
         <motion.div 
             className={`stage ${props.faded ? 'faded' : ''}`}
-            animate='animate'
             whileHover='hover'
             variants={stageVariants}
+            {...props}
             >
             <div className={`stage__header ${getClassForColor()}`}>
                 <p>{props.heading}</p>

@@ -69,6 +69,8 @@
     .stage__header {
         font-size: 1rem;
         padding: 0.5rem 0rem 0.5rem 1.5rem;
+        border-top-left-radius: 0.6rem;
+        border-top-right-radius: 0.6rem;
     }
 
     .stage__header img {
@@ -82,11 +84,16 @@
 }
 
 @media screen and (max-width: 450px) {
+    .stage {
+        width: 100%;
+        border: 0.12rem solid black;
+    }
+
     .stage__header {
         font-size: 0.9rem;
         padding: 0.5rem 0rem 0.5rem 1.3rem;
-        border-top-left-radius: 0.7rem;
-        border-top-right-radius: 0.7rem;
+        border-top-left-radius: 0.6rem;
+        border-top-right-radius: 0.6rem;
     }
 
     .stage__content {
