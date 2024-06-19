@@ -5,7 +5,7 @@ import useIsMobile from '../../Hooks/useIsMobile';
 import './questions.css';
 
 const Questions = () => {
-    const isMobile = useIsMobile;
+    const isMobile = useIsMobile(1050);
 
     return (
         <div className='questions'>

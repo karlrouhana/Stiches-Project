@@ -9,7 +9,7 @@ import useIsMobile from '../../Hooks/useIsMobile';
 import './home.css';
 
 const Home = () => {
-    const isMobile = useIsMobile;
+    const isMobile = useIsMobile(1050);
 
     return (
         <div className='home'>
