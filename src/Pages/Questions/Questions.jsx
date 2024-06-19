@@ -1,20 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import Card from '../../Components/Card/Card';
 import questionPic from '../../Assets/LandingPageAssets/exclamations.svg';
+import useIsMobile from '../../Hooks/useIsMobile';
 import './questions.css';
 
 const Questions = () => {
-    const [isMobile, setIsMobile] = useState(window.innerWidth < 1050);
-
-    useEffect(() => {
-        const handleResize = () => {
-            setIsMobile(window.innerWidth < 1050);
-        }
-        window.addEventListener('resize', handleResize);
-        return () => {
-            window.removeEventListener('resize', handleResize);
-            }
-    }, []);
+    const isMobile = useIsMobile;
 
     return (
         <div className='questions'>

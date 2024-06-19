@@ -6,19 +6,11 @@ import qr from '../../Assets/LandingPageAssets/qrCode.svg';
 import mobilePic from '../../Assets/LandingPageAssets/ministeps.svg';
 import Heading from '../../Components/Heading/Heading';
 import Button from '../../Components/Button/Button';
+import useIsMobile from '../../Hooks/useIsMobile';
 import './works.css';
 
 const Works = () => {
-    const [isMobile, setIsMobile] = useState(window.innerWidth < 1050);
-
-    useEffect(() => {
-        const handleResize = () => {
-            setIsMobile(window.innerWidth < 1050);
-        };
-
-        window.addEventListener('resize', handleResize);
-        return () => window.removeEventListener('resize', handleResize);
-    }, []);
+    const isMobile = useIsMobile
 
     return (
         <div className='works'>

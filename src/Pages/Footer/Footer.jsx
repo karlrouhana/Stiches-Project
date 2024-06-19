@@ -1,20 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import logo from '../../Assets/Images/logo.webp';
 import { FaInstagram, FaFacebookSquare, FaLinkedin} from "react-icons/fa";
+import useIsMobile from '../../Hooks/useIsMobile';
 import './footer.css';
 
 const Footer = () => {
-    const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
-
-    useEffect(() => {
-        const handleResize = () => {
-            setIsMobile(window.innerWidth < 768);
-        }
-        window.addEventListener('resize', handleResize);
-        return () => {
-            window.removeEventListener('resize', handleResize);
-            }
-    }, []);
+    const isMobile = useIsMobile;
 
     return (
         <div className='footer'>

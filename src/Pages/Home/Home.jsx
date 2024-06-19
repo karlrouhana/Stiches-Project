@@ -5,19 +5,11 @@ import Pic2 from '../../Assets/LandingPageAssets/browsingUnis.svg';
 import Pic3 from '../../Assets/LandingPageAssets/education.svg';
 import Pic4 from '../../Assets/LandingPageAssets/yellowCheck.svg';
 import MobilePic from '../../Assets/LandingPageAssets/minibrowse.svg';
+import useIsMobile from '../../Hooks/useIsMobile';
 import './home.css';
 
 const Home = () => {
-    const [isMobile, setIsMobile] = useState(window.innerWidth < 1050);
-
-    useEffect(() => {
-        const handleResize = () => {
-            setIsMobile(window.innerWidth < 1050);
-        };
-
-        window.addEventListener('resize', handleResize);
-        return () => window.removeEventListener('resize', handleResize);
-    }, []);
+    const isMobile = useIsMobile;
 
     return (
         <div className='home'>

@@ -1,19 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import favPic from '../../Assets/LandingPageAssets/favourite.svg';
 import miniTest from '../../Assets/LandingPageAssets/minitest.svg';
-import './testimonials.css';
 import Heading from '../../Components/Heading/Heading';
+import useIsMobile from '../../Hooks/useIsMobile';
+import './testimonials.css';
 
 const Testimonials = () => {
-    const [isMobile, setIsMobile] = useState(window.innerWidth < 1050);
-
-    useEffect(() => {
-        const handleResize = () => {
-            setIsMobile(window.innerWidth <= 768);
-        }
-        window.addEventListener('resize', handleResize);
-        return () => { window.removeEventListener('resize', handleResize); }
-    }, []);
+    const isMobile = useIsMobile;
 
     return (
         <div className='testimonials'>
