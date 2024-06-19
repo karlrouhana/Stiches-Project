@@ -136,6 +136,7 @@
     bottom: -0.09rem;
 }
 
+
 @media screen and (max-width: 1050px) {
     .home {
         display: flex;
@@ -188,7 +189,7 @@
     }
 
     .home__lines .line-3 img {
-        align-self: start;
+        align-self: center;
         position: unset;
         transform: translateY(0) scale(0.87) translateX(-6rem);
         width: 100%;
