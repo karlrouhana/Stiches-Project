@@ -48,7 +48,7 @@
     gap: 2rem;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1050px) {
     .questions{
         padding: 0 1.7rem;
         width: 100%;
@@ -65,7 +65,7 @@
     }
     
     .questions__heading-content p {
-        font-size: 0.8rem;
+        font-size: 1rem;
         margin-left: 0;
     }
     
@@ -74,7 +74,7 @@
     }
     
     .questions__heading-content h1 {
-        font-size: 1.34rem;
+        font-size: 2rem;
         text-align: center;
         margin: 0;
     }
@@ -85,6 +85,19 @@
         gap: 1.5rem;
     }
     
+}
+
+@media screen and (max-width: 768px) {
+    .questions__heading-content p {
+        font-size: 0.8rem;
+        margin-left: 0;
+    }
+    
+    .questions__heading-content h1 {
+        font-size: 1.34rem;
+        text-align: center;
+        margin: 0;
+    }
 }
 
 @media screen and (max-width: 350px) {

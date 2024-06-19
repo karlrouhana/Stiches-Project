@@ -4,11 +4,11 @@ import questionPic from '../../Assets/LandingPageAssets/exclamations.svg';
 import './questions.css';
 
 const Questions = () => {
-    const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 1050);
 
     useEffect(() => {
         const handleResize = () => {
-            setIsMobile(window.innerWidth < 768);
+            setIsMobile(window.innerWidth < 1050);
         }
         window.addEventListener('resize', handleResize);
         return () => {

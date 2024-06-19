@@ -22,6 +22,7 @@
 .works__footer {
     display: flex;
     gap: 11%;
+    margin-bottom: 3%;
 }
 
 .works__footer-cards {
@@ -48,7 +49,7 @@
 .works__footer-image img {
     width: 100%;
     height: auto;
-    transform: translateY(1%);
+    transform: translateY(11.5%);
 }
 
 .works__newsletter {
@@ -111,9 +112,26 @@
     color: black;
 }
 
+@media screen and (max-width: 1275px) {
+    .works__footer-image {
+        display: none;
+    }
+
+    .works__footer{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 6rem;
+    }
+
+    .works__footer-cards {
+        margin: 0;
+    }
+}
+
 @media screen and (max-width: 1050px) {
     .works {
-        margin-top: 10rem;
+        margin-top: 15rem;
     }
 
     .works__steps-heading {
@@ -180,6 +198,9 @@
 }
 
 @media screen and (max-width: 768px) {
+    .works{
+        margin-top: 8rem;
+    }
     .works__newsletter {
         padding: 2.5rem 4rem;
         height: auto;
