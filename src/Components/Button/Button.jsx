@@ -17,10 +17,11 @@ const Button = (props) => {
     };
 
     const buttonVariants = {
-        initial: { opacity: 0, y: -10 },
-        animate: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+        initial: { opacity: 0 },
+        animate: { opacity: 1, transition: { duration: 0.5 } },
         hover: {
-            translateY: 5,
+            x: 2,
+            y: 2,
             boxShadow: "0px 0px 0px 0px rgba(0, 0, 0, 0)",
             transition: { duration: 0.3 },
         }
@@ -28,7 +29,7 @@ const Button = (props) => {
 
     return (
         <motion.button
-            className={`button ${getClassForColor()} ${props.large ? 'btn-large' : ''}`}
+            className={`button ${getClassForColor()} ${props.large && 'btn-large'}`}
             variants={buttonVariants}
             initial="initial"
             animate="animate"

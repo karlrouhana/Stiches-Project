@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import favPic from '../../Assets/LandingPageAssets/favourite.svg';
 import miniTest from '../../Assets/LandingPageAssets/minitest.svg';
-import Heading from '../../Components/Heading/Heading';
-import useIsMobile from '../../Hooks/useIsMobile';
 import './testimonials.css';
+import useIsMobile from '../../Hooks/useIsMobile';
+import Heading from '../../Components/Heading/Heading';
 
 const Testimonials = () => {
-    const isMobile = useIsMobile;
+    const isMobile = useIsMobile(768);
 
     return (
         <div className='testimonials'>

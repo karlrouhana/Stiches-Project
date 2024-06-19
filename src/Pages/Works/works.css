@@ -14,6 +14,10 @@
     gap: 1rem;
 }
 
+.works__steps-heading > *:nth-child(2){
+    z-index: 1;
+}
+
 .works__steps img {
     margin-right: 8.5%;
     transform: translateY(-20%);
