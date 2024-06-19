@@ -32,8 +32,12 @@ const Stage = (props) => {
     return (
         <motion.div 
             className={`stage ${props.faded ? 'faded' : ''}`}
-            whileHover='hover'
-            variants={stageVariants}
+            whileHover= {{
+                x: 2,
+                y: 2,
+                boxShadow: "0px 0px 0px 0px rgba(0, 0, 0, 0)",
+                transition: { duration: 0.3, delay: 0}
+            } }
             {...props}
             >
             <div className={`stage__header ${getClassForColor()}`}>

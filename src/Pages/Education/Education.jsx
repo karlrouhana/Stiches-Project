@@ -16,33 +16,44 @@ const Education = () => {
         }
     }, [controls, inView]);
 
+    const container = {
+        hidden: { opacity: 0 },
+        show: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.25
+            },
+        },
+    }
+
+    const item = {
+        hidden: { x: 2000 },
+        show: { x: 0 },
+    }
+
     const stages = [
         {
             heading: 'Streamlined Application Submission',
             content: 'Apply to multiple institutions seamlessly through one platform, simplifying the process.',
             color: 'yellow',
-            delay: 0.25,
         },
         {
             heading: 'Tailored Career Guidance',
             content: 'Identify ideal programs with an industry-approved career test, tailored to match your interests and goals.',
             color: 'green',
             faded: true,
-            delay: 0.5,
         },
         {
             heading: 'Extensive University Directory',
             content: 'Explore over 300 universities conveniently in one place, broadening your options.',
             color: 'pink',
             faded: true,
-            delay: 0.75,
         },
         {
             heading: 'Integrated Application Management',
             content: 'Efficiently track and manage applications from start to finish within the platform, ensuring nothing falls through the cracks.',
             color: 'blue',
             faded: true,
-            delay: 1,
         },
     ];
 
@@ -58,20 +69,26 @@ const Education = () => {
             </div>
             <div className="education__content">
                 <Heading title='Why Education Basket?' subtitle='Smoother Educational Journeys' />
-                <div className="education__content-stages">
+                <motion.div
+                    className="education__content-stages"
+                    variants={container}
+                    initial="hidden"
+                    animate="show"
+                >
                     {stages.map((stage, index) => (
-                        <Stage
+                        <motion.div
                             key={index}
-                            heading={stage.heading}
-                            content={stage.content}
-                            color={stage.color}
-                            faded={stage.faded}
-                            initial={{ x: 2000 }}
-                            animate={inView && { x: 0 }}
-                            transition={{ duration: 1, delay: stage.delay }}
-                        />
+                            variants={item}
+                        >
+                            <Stage
+                                heading={stage.heading}
+                                content={stage.content}
+                                color={stage.color}
+                                faded={stage.faded}
+                            />
+                        </motion.div>
                     ))}
-                </div>
+                </motion.div>
             </div>
         </motion.div>
     );
