@@ -5,7 +5,7 @@ import useIsMobile from '../../Hooks/useIsMobile';
 import './footer.css';
 
 const Footer = () => {
-    const isMobile = useIsMobile;
+    const isMobile = useIsMobile(1050);
 
     return (
         <div className='footer'>

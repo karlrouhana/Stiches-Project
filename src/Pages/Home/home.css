@@ -136,6 +136,12 @@
     bottom: -0.09rem;
 }
 
+@media screen and (max-width: 1250px) {
+    .line-4{
+        justify-content: center;
+        text-align: center;
+    }
+}
 
 @media screen and (max-width: 1050px) {
     .home {

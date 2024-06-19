@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import {motion} from 'framer-motion';
 import Button from '../../Components/Button/Button';
 import Pic1 from '../../Assets/LandingPageAssets/confused.svg';
 import Pic2 from '../../Assets/LandingPageAssets/browsingUnis.svg';
@@ -10,9 +11,14 @@ import './home.css';
 
 const Home = () => {
     const isMobile = useIsMobile(1050);
+    const isTablet = useIsMobile(1250);
 
     return (
-        <div className='home'>
+        <motion.div 
+            className='home'
+            initial={{opacity: 0}}
+            animate={{opacity: 1}}
+            transition={{duration: 1}}>
             <div className='home__content'>
                 <h1>Elevate Your Learning Experience Aboard</h1>
                 <p>Education Basket is a platform empowering students to seamlessly apply to multiple universities worldwide through a single application, backed by expert counselors every step of the way.</p>
@@ -40,10 +46,10 @@ const Home = () => {
                         <p>Unearth your optimal career path in a mere 15-minute span using our complimentary assessment, and commence sculpting your professional journey at absolutely no cost.</p>
                         <Button value='Start For Free' color='yellow' large={true} />
                     </div>
-                    <img src={Pic3} alt="pic3" className='line-4__image'/>
+                    {!isTablet && <img src={Pic3} alt="pic3" className='line-4__image'/>}
                 </div>
             </div>
-        </div>
+        </motion.div>
     );
 };
 

@@ -1,12 +1,20 @@
 import React, { useEffect } from 'react';
+import { animate, motion, useAnimation } from 'framer-motion';
+import useScrollAnimation from '../../Hooks/useScrollAnimation';
 import Stage from '../../Components/Stage/Stage';
 import Heading from '../../Components/Heading/Heading';
 import Pic from '../../Assets/LandingPageAssets/stars.svg';
 import './education.css';
 
 const Education = () => {
+    const controls = useScrollAnimation('.education');
+
     return (
-        <div className='education'>
+        <motion.div 
+            className='education'
+            initial={{opacity: 0}}
+            animate={controls}
+            >
             <div className="education__image">
                 <img src={Pic} alt="Pic" />
             </div>
@@ -38,8 +46,8 @@ const Education = () => {
                     />
                 </div>
             </div>
-        </div>
-    )
-}
+        </motion.div>
+    );
+};
 
 export default Education;
