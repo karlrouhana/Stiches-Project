@@ -7,7 +7,7 @@ import './education.css';
 
 const Education = () => {
     const ref = useRef(null);
-    const inView = useInView(ref, { triggerOnce: true });
+    const inView = useInView(ref, { once: true });
     const controls = useAnimation();
 
     useEffect(() => {
@@ -30,6 +30,16 @@ const Education = () => {
     const item = {
         hidden: { x: 2000 },
         show: { x: 0 },
+    }
+
+    const imageVariants = {
+        hidden: { opacity: 0 },
+        show: {
+             opacity: 1, 
+             transition: {
+                delay: 1
+             }
+        }
     }
 
     const stages = [
@@ -65,9 +75,14 @@ const Education = () => {
             animate={controls}
             ref={ref}
         >
-            <div className="education__image">
+            <motion.div 
+                className="education__image"
+                variants={imageVariants}
+                initial='hidden'
+                animate='show'
+                >
                 <img src={Pic} alt="Pic" />
-            </div>
+            </motion.div>
             <div className="education__content">
                 <Heading title='Why Education Basket?' subtitle='Smoother Educational Journeys' />
                 {inView && <motion.div

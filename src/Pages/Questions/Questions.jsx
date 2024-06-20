@@ -7,7 +7,7 @@ import './questions.css';
 
 const Questions = () => {
     const ref = useRef(null);
-    const inView = useInView(ref, { triggerOnce: true });
+    const inView = useInView(ref, { once: true });
     const isMobile = useIsMobile(1050);
 
     const cards = [

@@ -8,39 +8,47 @@ import Heading from '../../Components/Heading/Heading';
 
 const Testimonials = () => {
     const ref = useRef(null);
-    const isInView = useInView(ref, { once: true });
+    const inView = useInView(ref, { once: true });
 
     const isMobile = useIsMobile(768);
+
+    const container = {
+        hiddenL: { x: -100 },
+        hiddenR : {x: 100},
+        show: {
+            x: 0,
+            transition: {
+                duration: 1
+            }
+        }
+    };
 
     return (
         <div className='testimonials' ref={ref} >
             {isMobile ?
-                <div className='testimonials__heading'
-                    style={{
-                        transform: isInView ? "none" : "translateX(-1000px)",
-                        opacity: isInView ? 1 : 0,
-                        transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
-                    }}>
+                <motion.div
+                    className='testimonials__heading'
+                    initial='hidden'
+                    animate={inView ? 'show' : 'hiddenL'}
+                    variants={container}
+                >
                     <Heading title='Testimonials' subtitle='Hear From Students' />
                     <img src={miniTest} alt="pic" />
-                </div> :
-                <div className='testimonials__image'
-                    style={{
-                        transform: isInView ? "none" : "translateX(-1000px)",
-                        opacity: isInView ? 1 : 0,
-                        transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
-                    }}
+                </motion.div> :
+                <motion.div
+                    className='testimonials__image'
+                    initial='hidden'
+                    animate={inView ? 'show' : 'hiddenL'}
+                    variants={container}
                 >
                     <img src={favPic} alt="pic" />
-                </div>
+                </motion.div>
             }
-            <div
+            <motion.div
                 className='testimonials__content'
-                style={{
-                    transform: isInView ? "none" : "translateX(1000px)",
-                    opacity: isInView ? 1 : 0,
-                    transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
-                }}
+                initial='hidden'
+                animate={inView ? 'show' : 'hiddenR'}
+                variants={container}
             >
                 {!isMobile && <Heading title='Testimonials' subtitle='Hear From Students' />}
                 <p>Before taking the career test, I felt lost, with a myriad of interests but no clear direction. The test was a revelation, pinpointing my aptitude for design—a field I'd always been passionate about but never considered seriously. With my newfound clarity, I turned to EB, which simplified the daunting task of applying to universities. Their streamlined process and support gave me the confidence to aim high.</p>
@@ -48,10 +56,9 @@ const Testimonials = () => {
                     <span>Posted by <p>Antonio, Aspiring Designer</p></span>
                     <span>on July 6, 2024</span>
                 </div>
-            </div>
+            </motion.div>
         </div>
     )
 }
 
 export default Testimonials;
-
