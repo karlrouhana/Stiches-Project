@@ -21,7 +21,8 @@ const Education = () => {
         show: {
             opacity: 1,
             transition: {
-                staggerChildren: 0.25
+                staggerChildren: 0.25,
+                delayChildren: 0.5
             },
         },
     }
@@ -69,7 +70,7 @@ const Education = () => {
             </div>
             <div className="education__content">
                 <Heading title='Why Education Basket?' subtitle='Smoother Educational Journeys' />
-                <motion.div
+                {inView && <motion.div
                     className="education__content-stages"
                     variants={container}
                     initial="hidden"
@@ -89,6 +90,7 @@ const Education = () => {
                         </motion.div>
                     ))}
                 </motion.div>
+                }
             </div>
         </motion.div>
     );

@@ -15,7 +15,12 @@ const Testimonials = () => {
     return (
         <div className='testimonials' ref={ref} >
             {isMobile ?
-                <div className='testimonials__heading'>
+                <div className='testimonials__heading'
+                    style={{
+                        transform: isInView ? "none" : "translateX(-1000px)",
+                        opacity: isInView ? 1 : 0,
+                        transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
+                    }}>
                     <Heading title='Testimonials' subtitle='Hear From Students' />
                     <img src={miniTest} alt="pic" />
                 </div> :
@@ -29,7 +34,7 @@ const Testimonials = () => {
                     <img src={favPic} alt="pic" />
                 </div>
             }
-            <div 
+            <div
                 className='testimonials__content'
                 style={{
                     transform: isInView ? "none" : "translateX(1000px)",
