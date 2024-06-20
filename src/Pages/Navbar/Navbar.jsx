@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
+import { motion } from 'framer-motion'; // Importing motion from framer-motion
 import Button from '../../Components/Button/Button';
 import { IoIosArrowDown } from "react-icons/io";
 import { LuArrowUpRight } from "react-icons/lu";
@@ -31,18 +32,22 @@ const Navbar = () => {
                 <img src={logo} alt="Logo" />
             </div>
 
-            <div className='menu-icon' onClick={handleMenuToggle}>
+            <motion.button 
+                className='menu-icon' 
+                onClick={handleMenuToggle}
+                whileTap={{ scale: 0.9 }}
+            >
                 {toggleMenu ? <RiCloseFill /> : <IoMenu />}
-            </div>
+            </motion.button>
 
             <div className={`navbar__links ${toggleMenu ? 'display__links' : 'hide__links'}`}>
-                <a href=''>Career Test</a>
-                <a href=''>Media Center <IoIosArrowDown /></a>
-                <a href=''>For Educational Institutions <LuArrowUpRight /></a>
+                <a href='' onClick={handleLinkClick}>Career Test</a>
+                <a href='' onClick={handleLinkClick}>Media Center <IoIosArrowDown /></a>
+                <a href='' onClick={handleLinkClick}>For Educational Institutions <LuArrowUpRight /></a>
 
                 <div className="navbar__links-buttons">
-                    <Button value='Log in' />
-                    <Button value='Sign Up' color='pink' />
+                    <Button value='Log in' onClick={handleLinkClick} />
+                    <Button value='Sign Up' color='pink' onClick={handleLinkClick} />
                 </div>
             </div>
         </nav>
