@@ -22,7 +22,7 @@ const Education = () => {
             opacity: 1,
             transition: {
                 staggerChildren: 0.25,
-                delayChildren: 0.5
+                delayChildren: 0.25
             },
         },
     }
