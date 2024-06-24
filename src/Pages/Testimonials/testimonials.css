@@ -10,6 +10,10 @@
     flex: 0 0 35%;
 }
 
+.testimonials__content{
+    width: 100%;
+}
+
 .testimonials__image img {
     width: 100%;
     margin-top: 3.3rem;

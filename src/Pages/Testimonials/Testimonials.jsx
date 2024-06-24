@@ -1,12 +1,33 @@
-import { motion, useInView } from 'framer-motion';
+import { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 import favPic from '../../Assets/LandingPageAssets/favourite.svg';
 import miniTest from '../../Assets/LandingPageAssets/minitest.svg';
 import './testimonials.css';
 import useIsMobile from '../../Hooks/useIsMobile';
 import Heading from '../../Components/Heading/Heading';
+import { useDispatch, useSelector } from 'react-redux';
+import { getTestimonialsAction } from '../../Redux/testimonialsActions';
+import { format } from 'date-fns';
 
 const Testimonials = () => {
+    const dispatch = useDispatch();
+    const testimonials = useSelector(state => state.testimonials.getTestimonials);
     const isMobile = useIsMobile(768);
+    const [currentTestimonial, setCurrentTestimonial] = useState(0);
+
+    useEffect(() => {
+        dispatch(getTestimonialsAction());
+    }, [dispatch]);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentTestimonial((prevIndex) => 
+                prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1
+            );
+        }, 5000);
+
+        return () => clearInterval(interval);
+    }, [testimonials]);
 
     const container = {
         hiddenL: { x: -100 },
@@ -19,8 +40,13 @@ const Testimonials = () => {
         }
     };
 
+    const fadeVariants = {
+        hidden: { opacity: 0 },
+        visible: { opacity: 1 }
+    };
+
     return (
-        <div className='testimonials' >
+        <div className='testimonials'>
             {isMobile ?
                 <motion.div
                     className='testimonials__heading'
@@ -50,14 +76,26 @@ const Testimonials = () => {
                 viewport={{ once: true }}
             >
                 {!isMobile && <Heading title='Testimonials' subtitle='Hear From Students' />}
-                <p>Before taking the career test, I felt lost, with a myriad of interests but no clear direction. The test was a revelation, pinpointing my aptitude for design—a field I'd always been passionate about but never considered seriously. With my newfound clarity, I turned to EB, which simplified the daunting task of applying to universities. Their streamlined process and support gave me the confidence to aim high.</p>
-                <div className="testimonials__content-credits">
-                    <span>Posted by <p>Antonio, Aspiring Designer</p></span>
-                    <span>on July 6, 2024</span>
-                </div>
+                {testimonials.length > 0 && (
+                    <motion.div
+                        className='testimonials__content'
+                        key={currentTestimonial}
+                        initial="hidden"
+                        animate="visible"
+                        exit="hidden"
+                        variants={fadeVariants}
+                        transition={{ duration: 2 }}
+                    >
+                        <p>{testimonials[currentTestimonial].content}</p>
+                        <div className="testimonials__content-credits">
+                            <span>Posted by <p>{testimonials[currentTestimonial].createdBy}, {testimonials[currentTestimonial].position}</p></span>
+                            <span>on {format(new Date(testimonials[currentTestimonial].createdAt), 'MMMM d, yyyy')}</span>
+                        </div>
+                    </motion.div>
+                )}
             </motion.div>
         </div>
-    )
+    );
 }
 
 export default Testimonials;
