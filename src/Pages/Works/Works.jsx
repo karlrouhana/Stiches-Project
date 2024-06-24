@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import {motion} from 'framer-motion';
-import useScrollAnimation from '../../Hooks/useScrollAnimation';
 import Card from '../../Components/Card/Card';
 import steps from '../../Assets/LandingPageAssets/Steps.svg';
 import uploadImg from '../../Assets/LandingPageAssets/uploadA.svg';
@@ -13,13 +12,14 @@ import './works.css';
 
 const Works = () => {
     const isMobile = useIsMobile(1050);
-    const controls = useScrollAnimation('.works');
 
     return (
         <motion.div 
             className='works'
-            initial={{opacity: 0}}
-            animate={controls}>
+            initial={{opacity: 0 }}
+            whileInView={{ opacity: 1 }} 
+            viewport={{ once: true }}
+            >
             <div className='works__steps'>
                 <div className="works__steps-heading">
                     <Heading title='How It Works' subtitle='Quick, Easy & Actionable' />

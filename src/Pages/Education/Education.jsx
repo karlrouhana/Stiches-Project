@@ -66,12 +66,14 @@ const Education = () => {
             className='education'
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
         >
             <motion.div
                 className="education__image"
                 variants={imageVariants}
                 initial='hidden'
                 animate='show'
+                viewport={{ once: true }}
             >
                 <img src={Pic} alt="Pic" />
             </motion.div>
@@ -82,6 +84,7 @@ const Education = () => {
                     variants={container}
                     whileInView="show"
                     initial="hidden"
+                    viewport={{ once: true }}
                 >
                     {stages.map((stage, index) => (
                         <motion.div

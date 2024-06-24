@@ -6,8 +6,6 @@ import useIsMobile from '../../Hooks/useIsMobile';
 import './questions.css';
 
 const Questions = () => {
-    const ref = useRef(null);
-    const inView = useInView(ref, { once: true });
     const isMobile = useIsMobile(1050);
 
     const cards = [
@@ -35,7 +33,7 @@ const Questions = () => {
     };
 
     return (
-        <motion.div className='questions' ref={ref}>
+        <motion.div className='questions'>
             <div className="questions__heading">
                 <div className="questions__heading-content">
                     <p>Answers to Your Questions</p>
@@ -43,24 +41,22 @@ const Questions = () => {
                 </div>
                 {!isMobile && <img src={questionPic} alt="Questions Illustration" />}
             </div>
-
-            {inView && (
-                <motion.div
-                    variants={container}
-                    initial="hidden"
-                    animate="show"
-                    className="questions__cards"
-                >
-                    {cards.map((card, index) => (
-                        <motion.div
-                            key={index}
-                            variants={item}
-                        >
-                            <Card value={card} />
-                        </motion.div>
-                    ))}
-                </motion.div>
-            )}
+            <motion.div
+                variants={container}
+                initial="hidden"
+                whileInView="show"
+                className="questions__cards"
+                viewport={{ once: true }}
+            >
+                {cards.map((card, index) => (
+                    <motion.div
+                        key={index}
+                        variants={item}
+                    >
+                        <Card value={card} />
+                    </motion.div>
+                ))}
+            </motion.div>
         </motion.div>
     );
 }
