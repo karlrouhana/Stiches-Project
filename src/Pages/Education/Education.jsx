@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { motion, useAnimation, useInView } from 'framer-motion';
 import Stage from '../../Components/Stage/Stage';
 import Heading from '../../Components/Heading/Heading';
@@ -6,6 +6,7 @@ import Pic from '../../Assets/LandingPageAssets/stars.svg';
 import './education.css';
 
 const Education = () => {
+    const [activeStage, setActiveStage] = useState(0);
     const ref = useRef(null);
     const inView = useInView(ref, { once: true });
     const controls = useAnimation();
@@ -52,21 +53,22 @@ const Education = () => {
             heading: 'Tailored Career Guidance',
             content: 'Identify ideal programs with an industry-approved career test, tailored to match your interests and goals.',
             color: 'green',
-            faded: true,
         },
         {
             heading: 'Extensive University Directory',
             content: 'Explore over 300 universities conveniently in one place, broadening your options.',
             color: 'pink',
-            faded: true,
         },
         {
             heading: 'Integrated Application Management',
             content: 'Efficiently track and manage applications from start to finish within the platform, ensuring nothing falls through the cracks.',
             color: 'blue',
-            faded: true,
         },
     ];
+
+    const handleStageClick = (index) => {
+        setActiveStage(index);
+    };
 
     return (
         <motion.div
@@ -80,7 +82,7 @@ const Education = () => {
                 variants={imageVariants}
                 initial='hidden'
                 animate='show'
-                >
+            >
                 <img src={Pic} alt="Pic" />
             </motion.div>
             <div className="education__content">
@@ -95,12 +97,13 @@ const Education = () => {
                         <motion.div
                             key={index}
                             variants={item}
+                            onClick={() => handleStageClick(index)}
                         >
                             <Stage
                                 heading={stage.heading}
                                 content={stage.content}
                                 color={stage.color}
-                                faded={stage.faded}
+                                faded={activeStage !== null && activeStage !== index}
                             />
                         </motion.div>
                     ))}
