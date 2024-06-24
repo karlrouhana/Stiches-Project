@@ -1,6 +1,7 @@
 .education {
     display: flex;
     margin-top: 5rem;
+    cursor: pointer;
 }
 
 .education__image {
