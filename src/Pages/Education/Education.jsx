@@ -72,7 +72,7 @@ const Education = () => {
                 className="education__image"
                 variants={imageVariants}
                 initial='hidden'
-                animate='show'
+                whileInView='show'
                 viewport={{ once: true }}
             >
                 <img src={Pic} alt="Pic" />

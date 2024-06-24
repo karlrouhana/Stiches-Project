@@ -1,5 +1,4 @@
-import { motion, useInView } from 'framer-motion';
-import React, { useRef } from 'react';
+import { motion } from 'framer-motion';
 import questionPic from '../../Assets/LandingPageAssets/exclamations.svg';
 import Card from '../../Components/Card/Card';
 import useIsMobile from '../../Hooks/useIsMobile';
@@ -33,7 +32,7 @@ const Questions = () => {
     };
 
     return (
-        <motion.div className='questions'>
+        <div className='questions'>
             <div className="questions__heading">
                 <div className="questions__heading-content">
                     <p>Answers to Your Questions</p>
@@ -42,10 +41,10 @@ const Questions = () => {
                 {!isMobile && <img src={questionPic} alt="Questions Illustration" />}
             </div>
             <motion.div
-                variants={container}
-                initial="hidden"
-                whileInView="show"
                 className="questions__cards"
+                variants={container}
+                initial='hidden'
+                whileInView='show'
                 viewport={{ once: true }}
             >
                 {cards.map((card, index) => (
@@ -57,7 +56,7 @@ const Questions = () => {
                     </motion.div>
                 ))}
             </motion.div>
-        </motion.div>
+        </div>
     );
 }
 

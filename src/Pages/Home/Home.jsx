@@ -95,7 +95,7 @@ const Home = () => {
                         <p>Unearth your optimal career path in a mere 15-minute span using our complimentary assessment, and commence sculpting your professional journey at absolutely no cost.</p>
                         <Button value='Start For Free' color='yellow' large={true} />
                     </div>
-                    {isMobile && <img src={Pic3} alt="pic3" className='line-4__image' />}
+                    <img src={Pic3} alt="pic3" className='line-4__image' />
                 </motion.div>
             </div>
         </div>
