@@ -19,3 +19,6 @@ ul{
     list-style: none;
 }
 
+button{
+    color: unset;
+}

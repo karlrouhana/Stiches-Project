@@ -1,5 +1,5 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { motion, useAnimation, useInView } from 'framer-motion';
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import Stage from '../../Components/Stage/Stage';
 import Heading from '../../Components/Heading/Heading';
 import Pic from '../../Assets/LandingPageAssets/stars.svg';
@@ -7,15 +7,6 @@ import './education.css';
 
 const Education = () => {
     const [activeStage, setActiveStage] = useState(0);
-    const ref = useRef(null);
-    const inView = useInView(ref, { once: true });
-    const controls = useAnimation();
-
-    useEffect(() => {
-        if (inView) {
-            controls.start({ opacity: 1 });
-        }
-    }, [controls, inView]);
 
     const container = {
         hidden: { opacity: 0 },
@@ -36,10 +27,10 @@ const Education = () => {
     const imageVariants = {
         hidden: { opacity: 0 },
         show: {
-             opacity: 1, 
-             transition: {
+            opacity: 1,
+            transition: {
                 delay: 1
-             }
+            }
         }
     }
 
@@ -74,10 +65,9 @@ const Education = () => {
         <motion.div
             className='education'
             initial={{ opacity: 0 }}
-            animate={controls}
-            ref={ref}
+            whileInView={{ opacity: 1 }}
         >
-            <motion.div 
+            <motion.div
                 className="education__image"
                 variants={imageVariants}
                 initial='hidden'
@@ -87,11 +77,11 @@ const Education = () => {
             </motion.div>
             <div className="education__content">
                 <Heading title='Why Education Basket?' subtitle='Smoother Educational Journeys' />
-                {inView && <motion.div
+                <motion.div
                     className="education__content-stages"
                     variants={container}
+                    whileInView="show"
                     initial="hidden"
-                    animate="show"
                 >
                     {stages.map((stage, index) => (
                         <motion.div
@@ -108,7 +98,6 @@ const Education = () => {
                         </motion.div>
                     ))}
                 </motion.div>
-                }
             </div>
         </motion.div>
     );
