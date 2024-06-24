@@ -140,7 +140,14 @@
 
 
 @media screen and (min-width: 1440px) {
-    
+    .line-3 img{
+        max-height: 60%;
+    }
+
+    .line-1 img{
+        max-height: 50%;
+        max-width: 50%;
+    }
 }
 
 @media screen and (max-width: 1250px) {
