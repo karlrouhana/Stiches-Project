@@ -82,8 +82,8 @@ const Education = () => {
                 <motion.div
                     className="education__content-stages"
                     variants={container}
-                    whileInView="show"
                     initial="hidden"
+                    whileInView="show"
                     viewport={{ once: true }}
                 >
                     {stages.map((stage, index) => (

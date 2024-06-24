@@ -3,6 +3,7 @@
     margin-top: 8rem;
     gap: 2.5rem;
     width: 100%;
+    overflow: hidden;
 }
 
 .testimonials__image {
@@ -62,6 +63,8 @@
         margin-top: 5rem;
         gap: 0rem;
         padding: 0 2.5rem;
+        padding-top: 1rem;
+
     }
 
     .testimonials__content {
